@@ -6,8 +6,8 @@ Analysis in medium CNN layers in DOS models comparing with physiological results
 
 ## CNN 7th-layer feature map examples
 <div align=center>
-<img width="450" height="350" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-47-15.jpg"/>
-<img width="450" height="350" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-433-15.jpg"/>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-47-15.jpg"/>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-433-15.jpg"/>
 </div>
 
 ## Gaussian fitting result
