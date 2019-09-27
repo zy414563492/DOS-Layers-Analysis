@@ -19,14 +19,14 @@ Analysis in medium CNN layers in DOS models comparing with physiological results
 
 method old
 
-https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/single_analyse_old.html
+https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/method_old(parameter)/single_analysis.ipynb
 
 
 method new
 
-https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/single_analysis_new.html
+https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/method_new(pixel)/single_analysis.ipynb
 
 
 ## Result
 
-https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/presentation.html
+https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/presentation.ipynb
