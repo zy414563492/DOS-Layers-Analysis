@@ -36,10 +36,16 @@ def make_gaussians2_sum(num_gaus, g_size, p):
 
 def fine_tuning(g_size, p, scale, theta_all, trans_x, trans_y):
     k = p.copy()
-    x1_new = np.array(k[1] - 64) * np.cos(theta_all) - np.array(k[2] - 64) * np.sin(theta_all) + 64
-    y1_new = np.array(k[1] - 64) * np.sin(theta_all) + np.array(k[2] - 64) * np.cos(theta_all) + 64
-    x2_new = np.array(k[7] - 64) * np.cos(theta_all) - np.array(k[8] - 64) * np.sin(theta_all) + 64
-    y2_new = np.array(k[7] - 64) * np.sin(theta_all) + np.array(k[8] - 64) * np.cos(theta_all) + 64
+    x_mid = (k[1] + k[7]) / 2
+    y_mid = (k[2] + k[8]) / 2
+    x1_new = np.array(k[1] - x_mid) * np.cos(theta_all) - np.array(k[2] - y_mid) * np.sin(theta_all) + x_mid
+    y1_new = np.array(k[1] - x_mid) * np.sin(theta_all) + np.array(k[2] - y_mid) * np.cos(theta_all) + y_mid
+    x2_new = np.array(k[7] - x_mid) * np.cos(theta_all) - np.array(k[8] - y_mid) * np.sin(theta_all) + x_mid
+    y2_new = np.array(k[7] - x_mid) * np.sin(theta_all) + np.array(k[8] - y_mid) * np.cos(theta_all) + y_mid
+    # x1_new = np.array(k[1] - 64) * np.cos(theta_all) - np.array(k[2] - 64) * np.sin(theta_all) + 64
+    # y1_new = np.array(k[1] - 64) * np.sin(theta_all) + np.array(k[2] - 64) * np.cos(theta_all) + 64
+    # x2_new = np.array(k[7] - 64) * np.cos(theta_all) - np.array(k[8] - 64) * np.sin(theta_all) + 64
+    # y2_new = np.array(k[7] - 64) * np.sin(theta_all) + np.array(k[8] - 64) * np.cos(theta_all) + 64
     k[1] = x1_new
     k[2] = y1_new
     k[7] = x2_new
@@ -58,7 +64,7 @@ def fine_tuning(g_size, p, scale, theta_all, trans_x, trans_y):
 
 
 def make_tuned_gaussians(g_size, p, x):
-    if x[0] != 1.8:
+    if x[0] != 1.65:
         return np.ones((g_size, g_size))
     param_new = fine_tuning(g_size, p, x[0], x[1], x[2], x[3])
     # print("x:", x)
@@ -213,8 +219,8 @@ for unit_use in range(0, 20):
     max_theta = np.pi
     # min_trans = -int(stim_size / 6)
     # max_trans = int(stim_size / 6)
-    x_trans = -7
-    y_trans = -6
+    x_trans = -8
+    y_trans = -1
 
 
     objfcn = lambda x: np.sqrt(np.sum((data_mod - make_tuned_gaussians(stim_size, param_init, x)) ** 2))
@@ -228,7 +234,7 @@ for unit_use in range(0, 20):
         print("itr:", itr)
 
         # 随机设置初始值
-        init_x = np.array([1.8,  # (max_scale - min_scale) * random.random() + min_scale,
+        init_x = np.array([1.65,  # (max_scale - min_scale) * random.random() + min_scale,
                            (max_theta - min_theta) * random.random() + min_theta,
                            x_trans,  # (max_trans - min_trans) * random.random() + min_trans,
                            y_trans])  # (max_trans - min_trans) * random.random() + min_trans])
@@ -236,7 +242,7 @@ for unit_use in range(0, 20):
         # init_x = np.array([1.8, 3.01, 3.01, 0, -13])
 
         # SLSQP约束方法
-        cons = ({'type': 'eq', 'fun': lambda x: x[0] - 1.8},  # {'type': 'ineq', 'fun': lambda x: x[0] - min_scale}, {'type': 'ineq', 'fun': lambda x: -x[0] + max_scale},
+        cons = ({'type': 'eq', 'fun': lambda x: x[0] - 1.65},  # {'type': 'ineq', 'fun': lambda x: x[0] - min_scale}, {'type': 'ineq', 'fun': lambda x: -x[0] + max_scale},
                 {'type': 'ineq', 'fun': lambda x: x[1] - min_theta}, {'type': 'ineq', 'fun': lambda x: -x[1] + max_theta},
                 {'type': 'eq', 'fun': lambda x: x[2] - x_trans},   # {'type': 'ineq', 'fun': lambda x: x[2] - min_trans}, {'type': 'ineq', 'fun': lambda x: -x[2] + max_trans},
                 {'type': 'eq', 'fun': lambda x: x[3] - y_trans})  # {'type': 'ineq', 'fun': lambda x: x[3] - min_trans}, {'type': 'ineq', 'fun': lambda x: -x[3] + max_trans})
