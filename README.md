@@ -2,7 +2,7 @@
 Analysis in medium CNN layers in DOS models comparing with physiological results from Border-ownership cells responses.
 
 ## STAS average
-<div align=center><img width="350" height="350" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/STAS%20average.jpg"/></div>
+<div align=center><img width="300" height="300" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/STAS%20average.jpg"/></div>
 
 ## CNN 7th-layer feature map examples
 <div align=center>
