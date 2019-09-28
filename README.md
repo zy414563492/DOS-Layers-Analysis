@@ -34,12 +34,12 @@ Analysis in medium CNN layers in DOS models comparing with physiological results
 
 **Single unit analysis**
 
-method old
+old method
 
 https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/method_old(parameter)/single_analysis.ipynb
 
 
-method new
+new method
 
 https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/method_new(pixel)/single_analysis.ipynb
 
