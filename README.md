@@ -4,14 +4,24 @@ Analysis in medium CNN layers in DOS models comparing with physiological results
 ## STAS average
 <div align=center><img width="260" height="260" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/STAS%20average.jpg"/></div>
 
-## CNN 7th-layer feature map examples
+## Feature map examples
+
+**CNN 7th-layer**
+
 <div align=center>
 <img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-47-15.jpg"/>
 <img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-433-15.jpg"/>
 </div>
 
 ## Gaussian fitting result
-<img src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/result.jpg"/>
+
+**CNN 7th-layer**
+
+<img src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/result_cnn7.jpg"/>
+
+**CNN 8th-layer**
+
+<img src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/result_cnn8.jpg"/>
 
 ## Detail
 
@@ -29,4 +39,10 @@ https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/method_new(pixel)
 
 ## Result
 
-https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/presentation.ipynb
+**CNN 7th-layer**
+
+https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/presentation_cnn7.ipynb
+
+**CNN 8th-layer**
+
+https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/presentation_cnn8.ipynb
