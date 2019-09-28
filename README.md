@@ -9,8 +9,15 @@ Analysis in medium CNN layers in DOS models comparing with physiological results
 **CNN 7th-layer**
 
 <div align=center>
-<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-47-15.jpg"/>
-<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize-convolution_7-433-15.jpg"/>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize_laplacian/7-15/visualize-convolution_7-47-15.jpg"/>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize_laplacian/7-15/visualize-convolution_7-433-15.jpg"/>
+</div>
+
+**CNN 8th-layer**
+
+<div align=center>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize_laplacian/8-15/visualize-convolution_8-50-15.jpg"/>
+<img width="420" height="320" src="https://github.com/zy414563492/DOS-Layers-Analysis/blob/master/presentation/visualize_laplacian/8-15/visualize-convolution_8-165-15.jpg"/>
 </div>
 
 ## Gaussian fitting result
